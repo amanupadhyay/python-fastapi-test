@@ -17,6 +17,12 @@ models.Base.metadata.create_all(bind=engine)
 def home():
     return "This is a home page"
 
+
+@app.get('/echo')
+def home(data:str):
+    return f"This is {data}"
+
+
 @app.get('/about')
 def about(name: str, surname: str):
     return f"This is a about page for {name} {surname}"
