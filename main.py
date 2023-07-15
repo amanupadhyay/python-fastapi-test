@@ -2,11 +2,13 @@ from fastapi import FastAPI, status, HTTPException, Depends, Request
 from sqlalchemy.orm import Session 
 from sqlalchemy.exc import IntegrityError
 
+
 from database import get_db, engine
 import models
 from schema import SignupRequest, SignupResponse
 
 app = FastAPI()
+
 
 users = []
 
